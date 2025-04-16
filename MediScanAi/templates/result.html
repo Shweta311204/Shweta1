@@ -1,0 +1,52 @@
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background-color: #f9f9fb;
+            color: #333;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .card {
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.4em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        p {
+            font-size: 1.3em;
+            margin: 5px 0;
+        }
+        .confidence {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        .prediction {
+            color: #c0392b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Diagnosis Report</h1>
+        <p><span class="prediction">Prediction:</span> {{ prediction }}</p>
+        <p><span class="confidence">Confidence:</span> {{ confidence }}</p>
+    </div>
+</body>
+</html>
